@@ -6,7 +6,9 @@ function playNoteWithSleep(duration, note){
     setTimeout( () => (
         melodyOutput.innerHTML += "Sleep ${duration}s"
         
-    ) );//end timeout
+    ),duration * 1000 );//end timeout
 
     
 }//close function
+
+playNoteWithSleep(77, 0.25)
