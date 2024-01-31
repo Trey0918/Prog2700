@@ -1,7 +1,7 @@
 body {
-background-color: blue;
+background-color: skyblue;
 display: flex;
-  align-item: center;
+  align-items: center;
   justify-content: center;
 
   height:100px;
@@ -10,9 +10,12 @@ display: flex;
 .sun{
 width:100px;
   height:100px;
-  background-color: yellow;
+  background-color: orange;
 
   position: relative;
   
+
+}
+@keyframes sunSettingColorchange{
 
 }
