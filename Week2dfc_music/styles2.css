@@ -1,5 +1,18 @@
 body {
 background-color: blue;
+display: flex;
+  align-item: center;
+  justify-content: center;
+
+  height:100px;
+
+}
+.sun{
+width:100px;
+  height:100px;
+  background-color: yellow;
+
+  position: relative;
   
 
 }
