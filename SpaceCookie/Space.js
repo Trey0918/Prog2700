@@ -38,18 +38,32 @@ function checkUnlockables() {
     if (score >= 9 && !unlockedObjects.includes('alien')) {
         isClickable = true;
         unlockObject('alien');
-    }
+    
+        let four = 0;
+        four++;
+        fourthElement(four);
 
-    if (unlockedObjects.includes('planet') && unlockedObjects.includes('rocket') && unlockedObjects.includes('alien')) {
-        isClickable = true;
-        fourthElement();
-}
-
-function fourthElement() {
-    if (score >= 12 && !unlockedObjects.includes('fourthEmoji')) {
-        unlockObject('fourthEmoji');
     }
 }
+
+function fourthElement(count) {
+
+    if (count === 1){
+    
+        if (unlockedObjects.length === 3){
+        const newIcon = document.createElement('div');
+        newIcon.id = 'newIcon';
+        newIcon.textContent = '🌌';
+        newIcon.classList.add('space-object', 'clickableDiv', 'milkyWay');
+        newIcon.onclick = function(){
+            alert('You clicked the new icon!');
+        }
+        document.body.appendChild(newIcon);
+    }
+    }
+}
+
+
 
     function scaleContents(div){
         if(isClickable === true){
