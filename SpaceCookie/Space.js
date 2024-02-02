@@ -18,6 +18,7 @@ function unlockObject(object) {
             unlockedObjects.push(object);
             document.getElementById(object).classList.add('unlocked');
             alert(`Congratulations! You've unlocked the ${object}!`);
+            isClickable = false;
         }
     }else{
         alert('You cannot click on this object. Please enable it first.');
@@ -26,19 +27,30 @@ function unlockObject(object) {
 
 
 function checkUnlockables() {
-    if (score >= 3) {
+    if (score >= 3 && !unlockedObjects.includes('planet')) {
         isClickable = true;
         unlockObject('planet');
     }
-    if (score >= 6) {
+    if (score >= 6 && !unlockedObjects.includes('rocket')) {
         isClickable = true;
         unlockObject('rocket');
     }
-    if (score >= 9) {
+    if (score >= 9 && !unlockedObjects.includes('alien')) {
         isClickable = true;
         unlockObject('alien');
     }
+
+    if (unlockedObjects.includes('planet') && unlockedObjects.includes('rocket') && unlockedObjects.includes('alien')) {
+        isClickable = true;
+        fourthElement();
 }
+
+function fourthElement() {
+    if (score >= 12 && !unlockedObjects.includes('fourthEmoji')) {
+        unlockObject('fourthEmoji');
+    }
+}
+
     function scaleContents(div){
         if(isClickable === true){
         div.classList.toggle('scaled');
