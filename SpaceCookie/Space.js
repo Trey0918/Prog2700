@@ -31,5 +31,5 @@ function checkUnlockables() {
     }
 }
 function scaleContents(div){
-    div.classList.toggle("scaled");
+    div.classList.toggle('scaled');
 }

@@ -15,9 +15,9 @@
     <div id="cookie" onclick="clickCookie()"></div>
     <div id="score">Score: <span id="scoreValue">0</span></div>
     <div id="spaceObjects">
-        <div class="space-object clickableDiv" id="planet" onclick="unlockObject('planet')">🪐</div>
-        <div class="space-object clickableDiv" id="rocket" onclick="unlockObject('rocket');scaledContents(this)">🚀</div>
-        <div class="space-object clickableDiv" id="alien" onclick="unlockObject('alien')">👾</div>
+        <div class="space-object clickableDiv scaled" id="planet" onclick="unlockObject('planet'); scaledContents(this);">🪐</div>
+        <div class="space-object clickableDiv scaled" id="rocket" onclick="unlockObject('rocket'); scaledContents(this);">🚀</div>
+        <div class="space-object clickableDiv scaled" id="alien" onclick="unlockObject('alien'); scaledContents(this);">👾</div>
     </div>
 
     <script src="Space.js"></script>

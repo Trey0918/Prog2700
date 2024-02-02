@@ -24,8 +24,11 @@
     margin: 10px;
     opacity: 0.2;
     transition: opacity 0.5s;
+    font-size: 40px;
 }
-
+.space-object:hover{
+    cursor: pointer;
+}
 .space-object.unlocked {
     opacity: 1;
 }
@@ -36,10 +39,11 @@ body {
     text-align: center;
     padding: 20px;
 }
-.clickableDiv{
+.clickableDiv {
     transition: transform 0.3s ease-in-out;
 }
 
 .scaled {
-    transform: scale(2);
+    transform: scale(1.5);
 }
+
