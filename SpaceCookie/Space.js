@@ -13,24 +13,34 @@ function updateScore() {
 }
 
 function unlockObject(object) {
-    if (!unlockedObjects.includes(object)) {
-        unlockedObjects.push(object);
-        document.getElementById(object).classList.add('unlocked');
-        alert(`Congratulations! You've unlocked the ${object}!`);
+    if (isClickable){
+        if (!unlockedObjects.includes(object)) {
+            unlockedObjects.push(object);
+            document.getElementById(object).classList.add('unlocked');
+            alert(`Congratulations! You've unlocked the ${object}!`);
+        }
+    }else{
+        alert('You cannot click on this object. Please enable it first.');
     }
 }
 
+
 function checkUnlockables() {
-    if (score >= 10) {
+    if (score >= 3) {
+        isClickable = true;
         unlockObject('planet');
     }
-    if (score >= 20) {
+    if (score >= 6) {
+        isClickable = true;
         unlockObject('rocket');
     }
-    if (score >= 30) {
+    if (score >= 9) {
+        isClickable = true;
         unlockObject('alien');
     }
 }
-function scaleContents(div){
-    div.classList.toggle('scaled');
+    function scaleContents(div){
+        if(isClickable === true){
+        div.classList.toggle('scaled');
+    }
 }
