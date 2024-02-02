@@ -1,5 +1,6 @@
 let score = 0;
 let unlockedObjects = [];
+let isClickable = false;
 
 function clickCookie() {
     score++;
