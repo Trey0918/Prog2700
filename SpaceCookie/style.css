@@ -36,3 +36,10 @@ body {
     text-align: center;
     padding: 20px;
 }
+.clickableDiv{
+    transition: transform 0.3s ease-in-out;
+}
+
+.scaled {
+    transform: scale(2);
+}

@@ -30,3 +30,6 @@ function checkUnlockables() {
         unlockObject('alien');
     }
 }
+function scaleContents(div){
+    div.classList.toggle("scaled");
+}
